@@ -40,9 +40,23 @@ struct Rectangle {
   height: u32,
 }
 
+trait Ss {
+  fn name(&self) -> str;
+}
+
+trait Sg {
+  fn age(&self) -> u8;
+}
+
 impl Rectangle {
   fn area(&self) -> u32 {
     self.width * self.height
+  }
+}
+
+impl Ss for Rectangle {
+  fn name(&self) -> String {
+    String::from("")
   }
 }
 
